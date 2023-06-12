@@ -49,6 +49,8 @@ struct ContentView: View {
             }
             .annotationTitles(.hidden)
             
+            UserAnnotation()
+            
             if let route {
                 MapPolyline(route)
                     .stroke(.blue, lineWidth: 5)
@@ -80,6 +82,11 @@ struct ContentView: View {
         }
         .onMapCameraChange { context in
             visibleRegion = context.region
+        }
+        .mapControls {
+            MapUserLocationButton()
+            MapCompass()
+            MapScaleView()
         }
     }
     
