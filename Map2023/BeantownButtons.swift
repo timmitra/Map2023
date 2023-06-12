@@ -10,6 +10,8 @@ import MapKit
 
 struct BeantownButtons: View {
     
+    @Binding var position: MapCameraPosition
+    
     @Binding var searchResults: [MKMapItem]
     
     func search(for query: String) {
@@ -42,11 +44,26 @@ struct BeantownButtons: View {
                 Label("Playgrounds", systemImage: "beach.umbrella")
             }
             .buttonStyle(.borderedProminent)
+            
+            Button {
+                position = .region(.boston)
+            } label: {
+                Label("Boston", systemImage: "building.2")
+            }
+            .buttonStyle(.bordered)
+
+            Button {
+                position = .region(.northShore)
+            } label: {
+                Label("Playgrounds", systemImage: "water.waves")
+            }
+            .buttonStyle(.bordered)
+
         }
         .labelStyle(.iconOnly)
     }
 }
 
 //#Preview {
-//    BeantownButtons(searchResults: Binding<[MKMapItem]>)
+//    BeantownButtons(position: <#Binding<MapCameraPosition>#>, searchResults: Binding<[MKMapItem]>)
 //}
