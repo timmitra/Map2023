@@ -14,11 +14,12 @@ extension CLLocationCoordinate2D {
 
 struct ContentView: View {
     
+    @State private var position: MapCameraPosition = .automatic
     @State private var searchResults: [MKMapItem] = []
     
     var body: some View {
         
-        Map {
+        Map(position: $position) {
             Annotation("Parking", coordinate: .parking) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 5)
