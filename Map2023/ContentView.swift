@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
+import MapKit
+
+extension CLLocationCoordinate2D {
+    static let parking = CLLocationCoordinate2D(latitude: 42.354528, longitude: -71.068369)
+}
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Map {
+            Marker("Parking", coordinate: .parking)
         }
-        .padding()
     }
 }
 
