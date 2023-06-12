@@ -15,7 +15,17 @@ extension CLLocationCoordinate2D {
 struct ContentView: View {
     var body: some View {
         Map {
-            Marker("Parking", coordinate: .parking)
+            Annotation("Parking", coordinate: .parking) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 5)
+                        .fill(.background)
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(.secondary, lineWidth: 5)
+                    Image(systemName: "car")
+                        .padding(5)
+                }
+            }
+            .annotationTitles(.hidden)
         }
     }
 }
