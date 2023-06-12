@@ -47,6 +47,9 @@ struct ContentView: View {
             }
             .background(.thinMaterial)
         }
+        .onChange(of: searchResults) {
+            position = .automatic
+        }
     }
 }
 
