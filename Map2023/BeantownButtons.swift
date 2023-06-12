@@ -14,11 +14,13 @@ struct BeantownButtons: View {
     
     @Binding var searchResults: [MKMapItem]
     
+    var visibleRegion: MKCoordinateRegion?
+    
     func search(for query: String) {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = query
         request.resultTypes = .pointOfInterest
-        request.region = MKCoordinateRegion(
+        request.region = visibleRegion ?? MKCoordinateRegion(
             center: .parking,
             span: MKCoordinateSpan(latitudeDelta: 0.0125, longitudeDelta: 0.0125))
         
