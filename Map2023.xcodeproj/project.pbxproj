@@ -14,6 +14,7 @@
 		2ACA8D712A36B25400638E91 /* Map2023Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA8D702A36B25400638E91 /* Map2023Tests.swift */; };
 		2ACA8D7B2A36B25400638E91 /* Map2023UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA8D7A2A36B25400638E91 /* Map2023UITests.swift */; };
 		2ACA8D7D2A36B25400638E91 /* Map2023UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA8D7C2A36B25400638E91 /* Map2023UITestsLaunchTests.swift */; };
+		2ACA8D8A2A36B79100638E91 /* BeantownButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA8D892A36B79100638E91 /* BeantownButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2ACA8D762A36B25400638E91 /* Map2023UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Map2023UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACA8D7A2A36B25400638E91 /* Map2023UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map2023UITests.swift; sourceTree = "<group>"; };
 		2ACA8D7C2A36B25400638E91 /* Map2023UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map2023UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2ACA8D892A36B79100638E91 /* BeantownButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeantownButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACA8D5F2A36B25200638E91 /* Map2023App.swift */,
+				2ACA8D892A36B79100638E91 /* BeantownButtons.swift */,
 				2ACA8D612A36B25200638E91 /* ContentView.swift */,
 				2ACA8D632A36B25400638E91 /* Assets.xcassets */,
 				2ACA8D652A36B25400638E91 /* Preview Content */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ACA8D622A36B25200638E91 /* ContentView.swift in Sources */,
+				2ACA8D8A2A36B79100638E91 /* BeantownButtons.swift in Sources */,
 				2ACA8D602A36B25200638E91 /* Map2023App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

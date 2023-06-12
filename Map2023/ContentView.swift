@@ -13,7 +13,11 @@ extension CLLocationCoordinate2D {
 }
 
 struct ContentView: View {
+    
+    @State private var searchResults: [MKMapItem] = []
+    
     var body: some View {
+        
         Map {
             Annotation("Parking", coordinate: .parking) {
                 ZStack {
@@ -26,6 +30,21 @@ struct ContentView: View {
                 }
             }
             .annotationTitles(.hidden)
+            
+            ForEach(searchResults, id: \.self) {
+                result in
+                Marker(item: result)
+            }
+        }
+        .mapStyle(.standard(elevation: .realistic))
+        .safeAreaInset(edge: .bottom) {
+            HStack {
+                Spacer()
+                BeantownButtons(searchResults: $searchResults)
+                    .padding(.top)
+                Spacer()
+            }
+            .background(.thinMaterial)
         }
     }
 }
