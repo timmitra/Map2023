@@ -14,8 +14,8 @@ import MapKit
 struct ItemInfoView: View {
     
     @State private var lookAroundScene: MKLookAroundScene?
-    @State var selectedResult: MKMapItem
-    @State var route: MKRoute?
+    var selectedResult: MKMapItem
+    var route: MKRoute?
     
     func getLookAroundScene() {
         lookAroundScene = nil
